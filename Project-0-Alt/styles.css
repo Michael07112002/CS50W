@@ -1,0 +1,141 @@
+.navbar-google {
+    list-style-type: none;
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.navbar-item-google{
+    margin: 10px;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+a:active {
+    color: black;
+}
+
+.centre-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    display: flex;
+    z-index: 3;
+    position: relative;
+    min-height: 44px;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+    border-radius: 24px;
+    margin: 0 auto;
+    width: calc(632px + 6px);
+    margin-top: 30px;
+}
+
+.search-form input[type="submit"] {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 30px;
+}
+
+.left-div {
+    display: flex;
+    justify-content: left; 
+    align-items: left;
+}
+
+.div-title {
+    color: #d93025;
+    font-size: 20px;
+    margin: 25px 35px;
+}
+
+.advanced-sub-heading {
+    min-width: 167px;
+    width: 16%;
+    font-size: 17px;
+    min-height: 42px;
+    font-weight: 500;
+    color: #333;
+    vertical-align: middle;
+    margin-left: 35px;
+    margin-top: 50px
+}
+
+.div-line {
+    border-bottom: 1px solid #ebebeb;
+} 
+
+.div-advanced-form {
+    margin-left: 35px;
+    margin-top: 50px
+} 
+
+.row-input{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    margin-top: 20px;
+
+} 
+
+.left {
+    width: 175px;
+} 
+
+.right {
+    width: 465px;
+} 
+
+.p-advanced {
+    font-size: 13px; 
+    font: arial;
+    vertical-align: middle;
+} 
+
+.btn-advanced {
+    box-shadow: none;
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+    border: 1px solid #3079ed;
+    color: #fff;
+}
+.btn-div {
+    display: flex-end;
+    justify-content: flex-end;
+    width: 585px;
+    margin-top: 30px;
+}
+
+.edit-btn {
+    display: flex;
+    justify-content: right;
+}
+
