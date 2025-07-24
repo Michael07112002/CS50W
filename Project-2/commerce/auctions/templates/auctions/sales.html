@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %} 
+
+{% block body %}
+ <h2>{{ transaction_type }}</h2>
+    {% if sales %}
+        {% for sale in sales %}
+            <div class="listing-div">
+                    <div class="image-listing-div">
+                        <img src="{{ sale.listing.image }}" alt="Listing Image" height="100">
+                    </div>
+                    
+                    <div class="info-listing-div">
+                        {% if sale.listing.category %}
+                        <div class="category-listing-div"><h5>{{ sale.listing.category }}</h5></div>
+                        {% endif %}
+                        <div class="title-listing-div"><h6><a href="{% url 'listing_page' sale.listing.pk %}">{{ sale.listing.title }}</a></h6></div>
+                        <div class="description-listing-div">{{ sale.listing.description }}</div>
+                        <div class="bid_listing-div"> Price: £{{ sale.price|floatformat:2 }}</div>
+                    </div>
+        {% endfor %}
+    {% else %}
+        No {{ transaction_type}}
+    {% endif %}
+
+{% endblock %}

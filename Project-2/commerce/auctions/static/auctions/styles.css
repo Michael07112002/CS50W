@@ -1,0 +1,56 @@
+body {
+    padding: 10px;
+} 
+
+.create-form-input {
+    margin-bottom: 30px; 
+}
+
+.form-div {
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: row; 
+    gap: 0px; 
+    
+}
+
+.header-div {
+    margin-bottom: 50px
+} 
+
+.label {
+    width: 100px
+}
+
+.listing-div{
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+
+}
+
+.image-listing-div{
+    width: 15%;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.info-listing-div{
+    width: 15%;
+    min-width: 100px;
+    flex-shrink: 0
+}
+
+.description-listing-div{
+    max-height: 150px;
+    width: 50%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    flex-shrink: 0;
+    padding: 0.5rem; 
+    border: 1px solid #ccc;
+    background: #eee;
+}
