@@ -1,0 +1,36 @@
+{% extends "network/layout.html" %} 
+{% block body %}
+
+    <div id="header-view">
+        <h3>Following</h3>
+    </div>
+    
+     
+    <div id="new-post-view">
+        <h6>New Post</h6>
+        <form id="new-post-form">
+            <div class="form-text-area-div">
+                <textarea class="form-control" id="new-post-content"></textarea>
+            </div>
+            <div id="char-counter"></div>
+            <div id="validation-feedback">
+                Post cannot be empty.
+            </div>
+            <div class="form-submit-div">
+                <input type="submit" class="btn btn-primary mb-3" id="new-post-submit" placeholder="Post">
+
+            </div>
+        </form>
+    </div> 
+
+
+    <div id="following-feed-view">
+    </div>
+{% endblock %}
+
+{% load static %}
+{% csrf_token %}
+{% now "U" as timestamp %}
+{% block script %}
+    <script src="{% static 'network/following.js' %}?v={{ timestamp }}"></script>
+{% endblock %}

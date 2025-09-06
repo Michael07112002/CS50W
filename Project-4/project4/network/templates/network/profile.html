@@ -1,0 +1,14 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+    <div id="profile-page-view" data-user-id="{{ user_pk }}">
+        <h3>{{ username }}</h3>
+    </div>
+
+{% endblock %}
+{% load static %}
+{% csrf_token %}
+{% now "U" as timestamp %}
+{% block script %}
+    <script src="{% static 'network/profile.js' %}?v={{ timestamp }}"></script>
+{% endblock %}

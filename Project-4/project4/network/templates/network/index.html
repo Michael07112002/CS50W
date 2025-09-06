@@ -1,0 +1,39 @@
+{% extends "network/layout.html" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <div id="header-view">
+        <h3>All Posts</h3>
+    </div>
+    
+    {% if user.is_authenticated %}
+        <div id="new-post-view">
+            <h6>New Post</h6>
+            <form id="new-post-form">
+                <div class="form-text-area-div">
+                    <textarea class="form-control" id="new-post-content"></textarea>
+                </div>
+                <div id="char-counter"></div>
+                <div id="validation-feedback">
+                    Post cannot be empty.
+                </div>
+                <div class="form-submit-div">
+                    <input type="submit" class="btn btn-primary mb-3" id="new-post-submit" value="Post">
+
+                </div>
+            </form>
+        </div> 
+    {% endif %}
+
+    <div id="feed-view">
+    </div>  
+    <div id="pagination-view"></div>
+
+{% endblock %}
+
+{% load static %}
+{% csrf_token %}
+{% now "U" as timestamp %}
+{% block script %}
+    <script src="{% static 'network/index.js' %}?v={{ timestamp }}"></script>
+{% endblock %}
